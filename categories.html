@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker - Categories</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            Expense <span>Tracker</span>
+        </div>
+
+
+        <nav class="nav">
+
+            <a href="dashboard.html">
+                ▦ Dashboard
+            </a>
+
+            <a href="transactions.html">
+                ☷ Transactions
+            </a>
+
+            <a href="add-expense.html">
+                ⊕ Add Expense
+            </a>
+
+            <a
+                href="categories.html"
+                class="active">
+
+                ◈ Categories
+
+            </a>
+
+            <a href="settings.html">
+                ⚙ Settings
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="theme-row">
+
+                <span>
+                    Dark Mode
+                </span>
+
+                <button
+                    id="themeToggle"
+                    class="switch">
+                </button>
+
+            </div>
+
+            <small>
+                Personal finance dashboard
+            </small>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+
+        <header class="topbar">
+
+            <div class="title">
+
+                <h1>
+                    Categories
+                </h1>
+
+                <p>
+                    See where your money is going
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <div
+            id="categoryGrid"
+            class="category-grid">
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<div
+    id="toast"
+    class="toast">
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>

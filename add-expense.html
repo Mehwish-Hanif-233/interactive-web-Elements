@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker - Add Transaction</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            Expense <span>Tracker</span>
+        </div>
+
+
+        <nav class="nav">
+
+            <a href="dashboard.html">
+                ▦ Dashboard
+            </a>
+
+            <a href="transactions.html">
+                ☷ Transactions
+            </a>
+
+            <a
+                href="add-expense.html"
+                class="active">
+
+                ⊕ Add Expense
+
+            </a>
+
+            <a href="categories.html">
+                ◈ Categories
+            </a>
+
+            <a href="settings.html">
+                ⚙ Settings
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="theme-row">
+
+                <span>Dark Mode</span>
+
+                <button
+                    id="themeToggle"
+                    class="switch">
+                </button>
+
+            </div>
+
+            <small>
+                Personal finance dashboard
+            </small>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+
+        <header class="topbar">
+
+            <div class="title">
+
+                <h1>
+                    Add Transaction
+                </h1>
+
+                <p>
+                    Record a new income or expense
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- FORM -->
+        <div class="card form-card">
+
+            <form id="transactionForm">
+
+
+                <div class="form-group">
+
+                    <label for="title">
+                        Description
+                    </label>
+
+                    <input
+                        id="title"
+                        type="text"
+                        required
+                        placeholder="e.g. Grocery Shopping">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="amount">
+                        Amount
+                    </label>
+
+                    <input
+                        id="amount"
+                        type="number"
+                        min="0.01"
+                        step="0.01"
+                        required
+                        placeholder="0.00">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="type">
+                        Transaction Type
+                    </label>
+
+                    <select id="type">
+
+                        <option value="expense">
+                            Expense
+                        </option>
+
+                        <option value="income">
+                            Income
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <select id="category">
+
+                        <option>
+                            Food
+                        </option>
+
+                        <option>
+                            Shopping
+                        </option>
+
+                        <option>
+                            Transport
+                        </option>
+
+                        <option>
+                            Bills
+                        </option>
+
+                        <option>
+                            Salary
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="date">
+                        Date
+                    </label>
+
+                    <input
+                        id="date"
+                        type="date"
+                        required>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        class="primary"
+                        type="submit">
+
+                        Save Transaction
+
+                    </button>
+
+
+                    <a
+                        class="secondary"
+                        href="transactions.html">
+
+                        Cancel
+
+                    </a>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<div
+    id="toast"
+    class="toast">
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
