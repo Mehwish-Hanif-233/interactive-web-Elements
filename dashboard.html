@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker - Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            Expense <span>Tracker</span>
+        </div>
+
+        <nav class="nav">
+
+            <a href="index.html" class="active">
+                ▦ Dashboard
+            </a>
+
+            <a href="transactions.html">
+                ☷ Transactions
+            </a>
+
+            <a href="add-expense.html">
+                ⊕ Add Expense
+            </a>
+
+            <a href="categories.html">
+                ◈ Categories
+            </a>
+
+            <a href="settings.html">
+                ⚙ Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="theme-row">
+
+                <span>Dark Mode</span>
+
+                <button
+                    id="themeToggle"
+                    class="switch"
+                    aria-label="Toggle dark mode">
+                </button>
+
+            </div>
+
+            <small>
+                Personal finance dashboard
+            </small>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div class="title">
+
+                <h1>Dashboard</h1>
+
+                <p>August 2026 overview</p>
+
+            </div>
+
+            <button
+                id="addTransactionBtn"
+                class="primary">
+
+                + Add Transaction
+
+            </button>
+
+        </header>
+
+
+        <!-- STAT CARDS -->
+        <section class="grid">
+
+            <div class="card">
+
+                <div class="stat-label">
+                    Current Balance
+                </div>
+
+                <div
+                    id="balance"
+                    class="stat-value">
+                    $0.00
+                </div>
+
+                <div class="positive">
+                    Available balance
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="stat-label">
+                    Total Income
+                </div>
+
+                <div
+                    id="income"
+                    class="stat-value">
+                    $0.00
+                </div>
+
+                <div class="positive">
+                    Money received
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="stat-label">
+                    Total Expenses
+                </div>
+
+                <div
+                    id="expenses"
+                    class="stat-value">
+                    $0.00
+                </div>
+
+                <div class="negative">
+                    Money spent
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="stat-label">
+                    Savings Rate
+                </div>
+
+                <div
+                    id="savings"
+                    class="stat-value">
+                    0%
+                </div>
+
+                <div class="positive">
+                    Of total income
+                </div>
+
+            </div>
+
+        </section>
+
+
+      <div class="chart-card">
+    <div class="chart-header">
+        <div>
+            <h3>Monthly Overview</h3>
+
+            <div class="chart-legend">
+                <span class="legend income">
+                    <span class="legend-dot"></span>
+                    Income
+                </span>
+
+                <span class="legend expense">
+                    <span class="legend-dot"></span>
+                    Expenses
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-wrapper">
+        <canvas id="monthlyChart"></canvas>
+    </div>
+</div>
+            <!-- RECENT TRANSACTIONS -->
+            <div class="card">
+
+                <h2>
+                    Recent Transactions
+                </h2>
+
+                <div id="recent">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- TOAST MESSAGE -->
+<div
+    id="toast"
+    class="toast">
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
